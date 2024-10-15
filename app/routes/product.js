@@ -4,12 +4,13 @@ const Product = require('../models/product');
 
 // Get all products
 router.get('/', async (req, res) => {
-    try {
-        const products = await Product.find();
-        res.json(products);
-    } catch (err) {
-        res.status(404).json({ message: err.message });
-    }
+    res.status(200).json({message: "Hello from Product Service"});
+    // try {
+    //     const products = await Product.find();
+    //     res.json(products);
+    // } catch (err) {
+    //     res.status(404).json({ message: err.message });
+    // }
 });
 
 // Create a new product

@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const connectDB = require('./db');
 const productRoutes = require('./routes/product');
+const dotenv = require('dotenv');
+dotenv.config('../.env');
 
 const app = express();
 const PORT = process.env.PORT || 8000;

@@ -10,7 +10,8 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 // Connect to MongoDB
-connectDB();
+const dbURI = process.env.MONGODB_URL;
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
 
 // Middleware
 app.use(bodyParser.json());
